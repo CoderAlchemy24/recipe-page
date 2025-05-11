@@ -1,0 +1,438 @@
+@font-face {
+    font-family: 'Outfit-Regular';
+    src: url('./assets/fonts/Outfit-Regular.ttf') format('truetype');
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0px;
+
+}
+
+@font-face {
+    font-family: 'Outfit-Bold';
+    src: url('./assets/fonts/Outfit-Bold.ttf') format('truetype');
+    font-family: Outfit-Bold, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0px; 
+}
+
+@font-face {
+    font-family: 'Outfit-SemiBold';
+    src: url('./assets/fonts/Outfit-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0px;
+
+}
+
+@font-face {
+    font-family: 'Young-Serif';
+    src: url('./assets/fonts/Young-Serif-Regular.ttf') format('truetype');
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+:root {
+    --font-family: 'Outfit-Regular', sans-serif;
+    --font-family-bold: 'Outfit-Bold', sans-serif;
+    --font-family-semi-bold: 'Outfit-SemiBold', sans-serif;
+    --font-family-serif: 'Young-Serif', serif;
+    --color-white: hsl(0, 0%, 100%);
+    --color-stone-100:hsl(30, 54%, 90%);
+    --color-stone-150: hsl(30, 18%, 87%);
+    --color-stone-600: hsl(30, 10%, 34%);
+    --color-stone-900: hsl(24, 5%, 18%);
+    --color-brown-800:hsl(14, 45%, 36%);
+    --color-rose-800: hsl(332, 51%, 32%);
+    --color-rose-50: hsl(330, 100%, 98%);
+
+    --font-size-body:16px;
+
+   
+    --font-size-desktop-text-preset-1: 40px;
+    --font-size-desktop-text-preset-2: 28px;
+    --font-size-desktop-text-preset-3: 20px;
+    --font-size-desktop-text-preset-4: 16px;
+    --font-size-desktop-text-preset-4-bold: 16px;
+        
+    --font-size-mobile-text-preset-1: 36px;
+
+    --spacing-1600: 128px;
+    --spacing-600: 48px;
+    --spacing-500: 40px;
+    --spacing-400: 32px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;
+    --spacing-150: 12px;    
+    --spacing-100: 8px;
+
+}
+
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding:0;
+}
+
+body{
+   margin: var(--spacing-1600) var(spacing-600);
+  background-color: var(--color-rose-50);
+
+  font-size:16px;
+}
+
+
+.card{
+    border-radius: var(--spacing-300, 24px);
+    background: var(--color-white, #FFF);
+   
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    margin: var(--spacing-600) auto;
+    width:736px;
+
+    display: flex;
+   
+    padding: var(--spacing-500, 40px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-500, 40px);
+    flex-shrink: 0;
+
+    width:736px;
+}
+
+.top-image{
+    width: 656px;
+   height: auto;
+   align-self: stretch;
+   border-radius: var(--spacing-150, 12px);
+  
+}
+
+.recipe-content{
+    width:100%;
+    height:auto;
+}
+
+h1{
+   align-self: stretch;
+
+   color: var(--color-stone-900, #312E2C);
+
+   margin-bottom: var(--spacing-200);
+
+   /* Desktop/text-preset-1 */
+   font-family: "Young Serif";
+   font-size: var(--font-size-desktop-text-preset-1, 40px);
+   font-style: normal;
+   font-weight: 400;
+   line-height: 100%; /* 40px */
+}
+
+.recipe-content p:first-of-type{
+   align-self: stretch;
+
+   color: var(--color-stone-600, #5F564D);
+   
+   margin-top: var(--spacing-300);
+   padding-bottom: var(--spacing-300);
+   /* Desktop/text-preset-4 */
+   font-family: Outfit;
+   font-size: var(--font-size-desktop-text-preset-4, 16px);
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; /* 24px */
+}
+
+.preparation{
+    display: block;
+
+    align-self: stretch;
+
+    border-radius: var(--spacing-150, 12px);
+    background: var(--color-rose-50, #FFF7FB);
+
+    padding: var(--spacing-400, 32px);
+
+}
+
+.preparation h3{
+   
+  align-self: stretch;
+  text-align: left;
+  color: var(--color-rose-800, #7A284E);
+
+ 
+  
+  padding-bottom: var(--spacing-200);
+ 
+  /* Desktop/text-preset-3 */
+  font-family: Outfit;
+  font-size: var(--font-size-desktop-text-preset-3, 20px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 20px */
+}
+
+.preparation ul{
+  padding: 0 var(--spacing-300) 0 var(--spacing-300);
+}
+
+.preparation ul li{
+    flex: 1 0 0;   
+
+   color: var(--color-stone-600, #5F564D);
+    
+   /* Desktop/text-preset-4 */
+   font-family: Outfit;
+   font-size: var(--font-size-desktop-text-preset-4, 16px);
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; /* 24px */
+
+}
+
+.preparation ul li span{
+    font-weight: 700;
+}
+
+
+.ingredients h2{
+   align-self: stretch;
+
+   color: var(--color-brown-800, #854632);
+
+
+   margin-top: var(--spacing-400);
+   margin-bottom: var(--spacing-300);
+   /* Desktop/text-preset-2 */
+   font-family: "Young Serif";
+   font-size: var(--font-size-desktop-text-preset-2, 28px);
+   font-style: normal;
+   font-weight: 400;
+   line-height: 100%; /* 28px */
+    }
+
+.ingredients ul{
+   padding-left: var(--spacing-200, 16px);
+}
+
+.ingredients ul li{
+  list-style-type: disc;
+
+  flex: 1 0 0;
+ 
+  
+  color: var(--color-stone-600, #5F564D);
+
+  /* Desktop/text-preset-4 */
+  font-family: Outfit;
+  font-size: var(--font-size-desktop-text-preset-4, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+
+
+.instructions h2{
+   align-self: stretch;
+
+   color: var(--color-brown-800, #854632);
+
+   margin-top: var(--spacing-400);
+   margin-bottom: var(--spacing-300);
+
+   /* Desktop/text-preset-2 */
+   font-family: "Young Serif";
+   font-size: var(--font-size-desktop-text-preset-2, 28px);
+   font-style: normal;
+   font-weight: 400;
+   line-height: 100%; /* 28px */
+   }
+
+.instructions ol{
+     padding-left: var(--spacing-200, 16px);
+}
+
+
+.instructions ol li{
+    list-style-type: number;
+    flex: 1 0 0;
+
+    color: var(--color-stone-600, #5F564D);
+
+    /* Desktop/text-preset-4-bold */
+    font-family: Outfit;
+    font-size: var(--font-size-desktop-text-preset-4, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+      
+}
+.instructions ol li span{
+    font-weight: 700;
+  
+   
+}
+
+hr {
+ width: 656px;
+ height: 1px;
+ margin-bottom: var(--spacing-400, 32px);
+ margin-top: var(--spacing-400, 32px);
+
+ background: var(--color-stone-150, #E3DDD7);
+}
+
+.nutrition h2{
+    align-self: stretch;
+
+    color: var(--color-brown-800, #854632);
+
+    margin-top: var(--spacing-400);
+    margin-bottom: var(--spacing-300);
+
+    /* Desktop/text-preset-2 */
+    font-family: "Young Serif";
+    font-size: var(--font-size-desktop-text-preset-2, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 28px */
+    }
+
+.nutrition p{
+   align-self: stretch;
+
+   margin-top: var(--spacing-300) 24px;
+   margin-bottom: var(--spacing-300) 24px;
+}
+
+.nutrition table{
+  width: 656px;
+
+   margin-top: var(--spacing-300);
+   margin-bottom: var(--spacing-500);
+ 
+  text-align:left;
+  
+}
+
+
+.nutrition table{
+    width: 100%;
+    height: auto;
+}
+
+ 
+.nutrition table tr th{
+  flex: 1 0 0;
+  
+  padding-left: var(--spacing-200, 16px);
+  
+  width: 45%;
+
+  color: var(--color-stone-600, #5F564D);
+
+  /* Desktop/text-preset-4 */
+  font-family: Outfit;
+  font-size: var(--font-size-desktop-text-preset-4, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+
+}
+
+
+.nutrition table tr{
+    height: 40px;
+    padding:var(--spacing-200, 16px);
+}
+.nutrition table tr th{
+      border-bottom: 1px solid var(--color-stone-150, #bcb4ad);
+   height:24px;
+}
+.nutrition table tr:last-of-type th{
+    border:none;
+}
+
+.nutrition table tr td{
+      border-bottom: 1px solid var(--color-stone-150, #bcb4ad);
+   height: 24px;
+}
+.nutrition table tr:last-of-type td{
+    border:none;
+}
+
+
+.nutrition table tr td{
+   flex: 1 0 0;
+   width:40%;
+   color: var(--color-brown-800, #854632);
+
+   /* Desktop/text-preset-4-bold */
+   font-family: Outfit;
+   font-size: var(--font-size-desktop-text-preset-4, 16px);
+   font-style: normal;
+   font-weight: 700;
+   line-height: 150%; /* 24px */
+
+}
+
+
+@media screen and (max-width: 768px) {
+    body{
+        margin: var(--spacing-600) var(--spacing-200);
+    }
+    .card{
+        width: 100%;
+       
+    }
+    .top-image{
+        margin:0;
+        width: 100%;
+        height: auto;
+        align-self: stretch;
+    }
+    h1{
+        font-size: var(--font-size-mobile-text-preset-1, 36px);
+    }
+    .recipe-head p{
+        font-size: var(--font-size-desktop-text-preset-4, 16px);
+    }
+    
+}
+
+
+@media screen and (max-width: 375px) {
+    
+    .card{
+        width: min-content;
+        margin:0;
+       
+    }
+    .top-image{
+        margin:0;
+        padding:0;
+        width:100%;
+        height: auto;
+        align-self: stretch;;
+    }
+    h1{
+        font-size: var(--font-size-mobile-text-preset-1, 32px);
+    }
+   hr{
+    width: 85%;
+    height: 1px;
+    margin-bottom: var(--spacing-400, 32px);
+    margin-top: var(--spacing-400, 32px);
+   }
+}
+
