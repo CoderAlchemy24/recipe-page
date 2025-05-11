@@ -404,6 +404,10 @@ hr {
     h1{
         font-size: var(--font-size-mobile-text-preset-1, 36px);
     }
+
+    hr{
+        width:100%;
+    }
     .recipe-head p{
         font-size: var(--font-size-desktop-text-preset-4, 16px);
     }
@@ -411,11 +415,16 @@ hr {
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 575px) {
     
-    .card{
-        width: min-content;
+    .recipe-container{
         margin:0;
+        padding: 0;
+    }
+
+    .card{
+        width: 100%;
+       
        
     }
     .top-image{
@@ -425,11 +434,17 @@ hr {
         height: auto;
         align-self: stretch;;
     }
+
+    .recipe-content{
+        width:100%;
+        height:auto;
+         margin:var(--spacing-100);
+    }
     h1{
         font-size: var(--font-size-mobile-text-preset-1, 32px);
     }
    hr{
-    width: 85%;
+    width: 55%;
     height: 1px;
     margin-bottom: var(--spacing-400, 32px);
     margin-top: var(--spacing-400, 32px);
